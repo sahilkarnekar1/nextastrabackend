@@ -1,6 +1,6 @@
 const Image = require('../models/Image');
 
-// POST /api/images
+
 exports.uploadImage = async (req, res) => {
   try {
     const { image } = req.body;
@@ -16,7 +16,6 @@ exports.uploadImage = async (req, res) => {
   }
 };
 
-// GET /api/images
 exports.getUserImages = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -28,7 +27,6 @@ exports.getUserImages = async (req, res) => {
   }
 };
 
-// DELETE /api/images/:id
 exports.deleteImage = async (req, res) => {
   try {
     const imageId = req.params.id;

@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Register controller
+
 exports.register = async (req, res) => {
   const { username, password } = req.body;
 
@@ -20,7 +20,6 @@ exports.register = async (req, res) => {
   }
 };
 
-// Login controller
 exports.login = async (req, res) => {
   const { username, password } = req.body;
 
@@ -41,7 +40,7 @@ exports.login = async (req, res) => {
   }
 };
 
-// Profile controller
+
 exports.getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
