@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use('/api', authRoutes);
 app.use('/api/images', imageRoutes);
-app.get('/', (req, res) => res.send('API Running'));
+app.get('/', (req, res) => res.send('API Running....'));
 
 mongoose
   .connect(process.env.MONGO_URI)
